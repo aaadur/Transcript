@@ -1,8 +1,0 @@
-version: '3.8'
-
-services:
-  whisper-transcriber:
-    build: .
-    volumes:
-      - .:/app
-    command: ["python", "transcribe.py", "/app/path/to/your/audiofile.wav"]
