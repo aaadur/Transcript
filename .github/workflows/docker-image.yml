@@ -1,5 +1,8 @@
 name: Docker Image CI
 
+env:
+  DOCKER_IMAGE: transcript
+  DOCKER_TAG: $(date +%s)
 on:
   push:
     branches: [ "main" ]
@@ -25,6 +28,6 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build . --tag transcript:$(date +%s)
-        docker tag transcript:$(date +%s) ${{ secrets.DOCKER_USERNAME }}/transcript
-        docker push ${{ secrets.DOCKER_USERNAME }}/transcript
+        docker build . --tag $DOCKER_IMAGE:$DOCKER_TAG
+        docker tag $DOCKER_IMAGE:$DOCKER_TAG ${{ secrets.DOCKER_USERNAME }}/$DOCKER_IMAGE
+        docker push ${{ secrets.DOCKER_USERNAME }}/$DOCKER_IMAGE
