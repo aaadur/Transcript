@@ -8,6 +8,7 @@ def extract_audio_from_video(video_path, audio_path):
     # Extraire l'audio et le sauvegarder
     video.audio.write_audiofile(audio_path)
 
+
 def transcribe_audio_to_text(audio_path):
     # Charger le modèle Whisper
     model = whisper.load_model("base")
