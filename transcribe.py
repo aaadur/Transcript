@@ -1,6 +1,6 @@
 import sys
 import whisper
-
+ 
 def transcribe_audio_to_text(audio_path):
     # Charger le modèle Whisper
     model = whisper.load_model("base")
