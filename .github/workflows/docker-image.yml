@@ -25,6 +25,6 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build . --tag trannscript:$(date +%s)
+        docker build . --tag transcript:$(date +%s)
         docker tag transcript:$(date +%s) ${{ secrets.DOCKER_USERNAME }}/transcript
         docker push ${{ secrets.DOCKER_USERNAME }}/transcript
