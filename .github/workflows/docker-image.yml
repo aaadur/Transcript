@@ -2,7 +2,7 @@ name: Docker Image CI
 
 env:
   DOCKER_IMAGE: "transcript"
-  DOCKER_TAG: "$(date +%s)"
+  DOCKER_TAG: "build"
   A: &DOCKER_IMAGE
   
 on:
