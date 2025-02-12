@@ -25,6 +25,6 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker-compose build
+        docker build .
         docker tag transcript ${{ secrets.DOCKER_USERNAME }}/transcript
         docker push ${{ secrets.DOCKER_USERNAME }}/transcript
