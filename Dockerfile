@@ -13,6 +13,9 @@ WORKDIR /app
 # Copier les fichiers nécessaires dans le conteneur
 COPY requirements.txt requirements.txt
 
+# Installer derniere version de PIP
+RUN pip install --upgrade pip
+
 # Installer les dépendances Python
 RUN pip install --no-cache-dir -r requirements.txt
 
