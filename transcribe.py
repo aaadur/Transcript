@@ -32,14 +32,14 @@ def generate_test_cases(transcription):
     return str(ai_msg.content)
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
+    if len(sys.argv) != 3:
         print("Usage: python transcribe.py <path_to_video_file> <path_to_audio_file>")
         sys.exit(1)
 
 # Chemins des fichiers
 video_path = sys.argv[1]
-audio_path = "extract.wav"
-txt_path = "cdt.txt"
+audio_path = sys.argv[2]+"extract.wav"
+txt_path = sys.argv[2]+"cdt.txt"
 
 # Extraire l'audio
 extract_audio_from_video(video_path, audio_path)
