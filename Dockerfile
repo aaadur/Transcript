@@ -23,4 +23,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY transcribe.py transcribe.py
 
 # Définir la commande par défaut à exécuter
-ENTRYPOINT ["python", "/mnt/azurefile/transcribe.py", "/mnt/azurefile/cdt.mp4"]
+ENTRYPOINT ["python", "transcribe.py", "/mnt/azurefile/cdt.mp4"]
