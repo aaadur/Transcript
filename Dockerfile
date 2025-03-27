@@ -17,7 +17,7 @@ COPY requirements.txt requirements.txt
 RUN pip install --upgrade pip
 
 # Installer les dépendances Python
-RUN pip install --no-cache-dir -r requirements.txt
+#RUN pip install --no-cache-dir -r requirements.txt
 
 # Copier le script Python dans le conteneur
 COPY transcribe.py transcribe.py
